@@ -1,0 +1,5 @@
+{
+    "require": {
+        "luyadev/luya-headless": "^1.0-rc"
+    }
+}
