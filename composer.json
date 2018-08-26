@@ -1,5 +1,19 @@
 {
+    "name" : "heartbeat/sdk-partner-api",
+    "description": "Heartbeat Partner API SDK",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Basil Suter",
+            "email": "basil@heartbeat.gmbh"
+        }
+    ],
     "require": {
         "luyadev/luya-headless": "^1.0-rc"
+    },
+    "autoload": {
+        "psr-4": {
+            "Heartbeat\\Partner\\" : "src/"
+        }
     }
 }
