@@ -20,4 +20,19 @@ class Poi extends ActiveEndpoint
     public $cords_lat;
     public $is_temp_closed;
     public $logo;
+
+    public function getEndpointName()
+    {
+        return 'pois';
+    }
+
+    protected static function findEventDates($id, Client $client)
+    {
+        return self::index()->setEndpoint('{endpointName}/{id}/events')->setTokens(['{id}' => $id]);
+    }
+
+    public function getEventDates(Client $client)
+    {
+        return EventDate::iterator(self::findEventDates($this->id)->all($client));
+    }
 }

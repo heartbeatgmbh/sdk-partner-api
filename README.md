@@ -1,4 +1,4 @@
-# Heartbeat Parnter API SDK
+# Heartbeat Parnter API SDK
 
 ## Installation
 
@@ -8,9 +8,11 @@ In order to you use to library composer is required.
 composer require heartbeat/sdk-partner-api
 ```
 
-## Usage
+## Usage
 
-Usage examples 
+*Events*
+
+Usage examples to get the latest events and display informations:
 
 ```php
 // create the client object with the access token
@@ -34,4 +36,32 @@ foreach (\Hearbeat\EventDate::findAll($client) as $date) {
         echo $poi->city;
         echo $poi->zip;
     }
+}
+```
+
+*POIs*
+
+An example to collect pois
+
+```php
+// create the client object with the access token
+$client = new \Heartbeat\Client('MY_ACCESS_TOKEN');
+
+// foreach trough pois, limited by pages.
+foreach (\Heartbeat\Poi::findAll($client) as $poi) {
+    echo $poi->title;
+    echo $poi->id;
+}
+```
+
+Get all events and openinghours for a given POI id 1337:
+
+```php
+// create the client object with the access token
+$client = new \Heartbeat\Client('MY_ACCESS_TOKEN');
+
+$poi = \Heartbeat\Poi::find()->with(['timetables'])->one(1337);
+
+if (!$poi) {
+    throw new \Exception("Unable to find the given POI id");
 }
