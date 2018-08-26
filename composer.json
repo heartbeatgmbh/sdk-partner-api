@@ -11,9 +11,17 @@
     "require": {
         "luyadev/luya-headless": "^1.0-rc"
     },
+    "require-dev": {
+        "phpunit/phpunit" : "~6.0.0"
+    },
     "autoload": {
         "psr-4": {
             "Heartbeat\\Partner\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Heartbeat\\Partner\\Test\\" : "test/"
         }
     }
 }

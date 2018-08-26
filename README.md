@@ -60,8 +60,13 @@ Get all events and openinghours for a given POI id 1337:
 // create the client object with the access token
 $client = new \Heartbeat\Client('MY_ACCESS_TOKEN');
 
-$poi = \Heartbeat\Poi::find()->with(['timetables'])->one(1337);
+$poi = \Heartbeat\Poi::find()->findOne(1337);
 
 if (!$poi) {
     throw new \Exception("Unable to find the given POI id");
 }
+
+foreach ($poi->eventDates as $date) {
+    echo $date->start_timestamp;
+}
+```

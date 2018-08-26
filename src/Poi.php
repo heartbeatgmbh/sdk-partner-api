@@ -23,16 +23,21 @@ class Poi extends ActiveEndpoint
 
     public function getEndpointName()
     {
-        return 'pois';
+        return '{{%pois}}';
     }
 
-    protected static function findEventDates($id, Client $client)
+    public function processContent(array $content)
+    {
+        return isset($content['items']) ? $content['items'] : $content;
+    }
+
+    protected static function findEventDates($id)
     {
         return self::index()->setEndpoint('{endpointName}/{id}/events')->setTokens(['{id}' => $id]);
     }
 
     public function getEventDates(Client $client)
     {
-        return EventDate::iterator(self::findEventDates($this->id)->all($client));
+        return EventDate::iterator(self::findEventDates($this->id)->response($client)->getContent());
     }
 }

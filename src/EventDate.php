@@ -14,6 +14,23 @@ class EventDate extends ActiveEndpoint
 
     public function getEndpointName()
     {
-        return 'events';
+        return '{{%events}}';
+    }
+
+    public function processContent(array $content)
+    {
+        return $content['items'];
+    }
+
+    private $_event;
+
+    public function setEvent(array $event)
+    {
+        $this->_event = $event;
+    }
+
+    public function getEvent()
+    {
+        return new Event($this->_event);
     }
 }
