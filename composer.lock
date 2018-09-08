@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bafb841f2351fd1f84be14b53ee7344e",
+    "content-hash": "53535af6c79be3a7e08a1043191a4564",
     "packages": [
         {
             "name": "curl/curl",
-            "version": "1.9.2",
+            "version": "1.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
-                "reference": "8fa349f9f82f8d892137fe87239a70b0d358d160"
+                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mod/curl/zipball/8fa349f9f82f8d892137fe87239a70b0d358d160",
-                "reference": "8fa349f9f82f8d892137fe87239a70b0d358d160",
+                "url": "https://api.github.com/repos/php-mod/curl/zipball/43436a604b18c2a985cbc3f983be817fbe500e99",
+                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99",
                 "shasum": ""
             },
             "require": {
@@ -59,20 +59,20 @@
                 "curl",
                 "dot"
             ],
-            "time": "2018-08-18T15:32:01+00:00"
+            "time": "2018-09-05T17:16:47+00:00"
         },
         {
             "name": "luyadev/luya-headless",
-            "version": "1.0.0-rc",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-headless.git",
-                "reference": "8eebdc810ccd418e945bb7711fc5fda4620be7eb"
+                "reference": "d173265ea8250d3e14958501f5013b789b3633b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-headless/zipball/8eebdc810ccd418e945bb7711fc5fda4620be7eb",
-                "reference": "8eebdc810ccd418e945bb7711fc5fda4620be7eb",
+                "url": "https://api.github.com/repos/luyadev/luya-headless/zipball/d173265ea8250d3e14958501f5013b789b3633b2",
+                "reference": "d173265ea8250d3e14958501f5013b789b3633b2",
                 "shasum": ""
             },
             "require": {
@@ -113,7 +113,7 @@
                 "php",
                 "yii2"
             ],
-            "time": "2018-08-25T10:04:04+00:00"
+            "time": "2018-09-03T11:54:43+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -1526,7 +1526,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "luyadev/luya-headless": 5
+        "luyadev/luya-headless": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
