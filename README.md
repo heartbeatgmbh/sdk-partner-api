@@ -10,7 +10,9 @@ composer require heartbeat/sdk-partner-api
 
 ## Usage
 
-*Events*
+Examples how to use the Heartbeat SDK. For every request you need a valid Client object holding the Access Key.
+
+### Events
 
 Usage examples to get the latest events and display informations:
 
@@ -39,7 +41,7 @@ foreach (\Hearbeat\EventDate::findAll($client) as $date) {
 }
 ```
 
-*POIs*
+### POIS
 
 An example to collect pois
 
@@ -60,7 +62,7 @@ Get all events and openinghours for a given POI id 1337:
 // create the client object with the access token
 $client = new \Heartbeat\Client('MY_ACCESS_TOKEN');
 
-$poi = \Heartbeat\Poi::find()->findOne(1337);
+$poi = \Heartbeat\Poi::find()->viewOne(1337);
 
 if (!$poi) {
     throw new \Exception("Unable to find the given POI id");

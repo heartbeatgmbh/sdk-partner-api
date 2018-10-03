@@ -33,7 +33,7 @@ class Poi extends ActiveEndpoint
 
     protected static function findEventDates($id)
     {
-        return self::index()->setEndpoint('{endpointName}/{id}/events')->setTokens(['{id}' => $id]);
+        return self::get()->setEndpoint('{endpointName}/{id}/events')->setTokens(['{id}' => $id]);
     }
 
     public function getEventDates(Client $client)

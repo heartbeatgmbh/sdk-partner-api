@@ -19,7 +19,7 @@ class EventDate extends ActiveEndpoint
 
     public function processContent(array $content)
     {
-        return $content['items'];
+        return isset($content['items']) ? $content['items'] : $content;
     }
 
     private $_event;
