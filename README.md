@@ -1,5 +1,12 @@
 # Heartbeat Parnter API SDK
 
+Access the Heartbeat Content Hub Partner APIs with this easy to use PHP SDK.
+
+[![Build Status](https://travis-ci.org/heartbeatgmbh/sdk-partner-api.svg?branch=master)](https://travis-ci.org/heartbeatgmbh/sdk-partner-api)
+[![Latest Stable Version](https://poser.pugx.org/heartbeat/sdk-partner-api/v/stable)](https://packagist.org/packages/heartbeat/sdk-partner-api)
+[![Total Downloads](https://poser.pugx.org/heartbeat/sdk-partner-api/downloads)](https://packagist.org/packages/heartbeat/sdk-partner-api)
+[![License](https://poser.pugx.org/heartbeat/sdk-partner-api/license)](https://packagist.org/packages/heartbeat/sdk-partner-api)
+
 ## Installation
 
 In order to you use to library composer is required.

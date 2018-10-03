@@ -16,6 +16,11 @@ class Stream extends ActiveEndpoint
         return '{{%streams}}';
     }
 
+    public function processContent(array $content)
+    {
+        return isset($content['items']) ? $content['items'] : $content;
+    }
+
     private $_items = [];
 
     public function setItems(array $items)

@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use Heartbeat\Partner\Client;
 use Heartbeat\Partner\Poi;
 use Heartbeat\Partner\EventDate;
+use Heartbeat\Partner\Stream;
 
 class PoiTest extends TestCase
 {
@@ -33,6 +34,23 @@ class PoiTest extends TestCase
         $this->assertInstanceOf('luya\headless\base\BaseIterator', $events->getModels());
         foreach ($events->getModels() as $item) {
             $this->assertInstanceOf('Heartbeat\Partner\EventDate', $item);
+        }
+    }
+
+    public function testStreams ()
+    {
+        $streams = Stream::findAll($this->getClient());
+
+
+        foreach ($streams->getModels() as $stream) {
+            $streamItem = Stream::view($stream->alias);
+            $r = $streamItem->response($this->getClient());
+            
+            /*
+            foreach ($streamItem->items as $i) {
+                var_dump($i);
+            }
+            */
         }
     }
 }
