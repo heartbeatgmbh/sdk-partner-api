@@ -17,9 +17,11 @@ class EventDate extends ActiveEndpoint
         return '{{%events}}';
     }
 
-    public function processContent(array $content)
+    public static function find()
     {
-        return isset($content['items']) ? $content['items'] : $content;
+        return parent::find()->setContentProcessor(function($content) {
+            return isset($content['items']) ? $content['items'] : $content;
+        });
     }
 
     private $_event;

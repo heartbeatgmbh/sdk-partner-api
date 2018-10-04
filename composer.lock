@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-headless.git",
-                "reference": "2c365699bde10271bbf1b0993505882c5894f36e"
+                "reference": "a6f6021aa42f579163b1943048320f71b5c14ac8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-headless/zipball/2c365699bde10271bbf1b0993505882c5894f36e",
-                "reference": "2c365699bde10271bbf1b0993505882c5894f36e",
+                "url": "https://api.github.com/repos/luyadev/luya-headless/zipball/a6f6021aa42f579163b1943048320f71b5c14ac8",
+                "reference": "a6f6021aa42f579163b1943048320f71b5c14ac8",
                 "shasum": ""
             },
             "require": {
@@ -113,7 +113,7 @@
                 "php",
                 "yii2"
             ],
-            "time": "2018-10-03T08:45:24+00:00"
+            "time": "2018-10-03T20:00:54+00:00"
         },
         {
             "name": "psr/simple-cache",

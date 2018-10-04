@@ -4,7 +4,6 @@ namespace Heartbeat\Partner;
 
 use luya\headless\base\BaseModel;
 
-
 class Event extends BaseModel
 {
     public $title;

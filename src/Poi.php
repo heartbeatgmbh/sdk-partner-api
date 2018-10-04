@@ -26,14 +26,23 @@ class Poi extends ActiveEndpoint
         return '{{%pois}}';
     }
 
-    public function processContent(array $content)
+    public function filterItems($content)
     {
         return isset($content['items']) ? $content['items'] : $content;
     }
 
+    public static function find()
+    {
+        return parent::find()->setContentProcessor(function($content) {
+            return isset($content['items']) ? $content['items'] : $content;
+        });
+    }
+
     protected static function findEventDates($id)
     {
-        return self::get()->setEndpoint('{endpointName}/{id}/events')->setTokens(['{id}' => $id]);
+        return self::get()->setEndpoint('{endpointName}/{id}/events')->setTokens(['{id}' => $id])->setContentProcessor(function($content) {
+            return isset($content['items']) ? $content['items'] : $content;
+        });
     }
 
     public function getEventDates(Client $client)

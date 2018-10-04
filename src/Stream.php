@@ -2,7 +2,9 @@
 
 namespace Heartbeat\Partner;
 
+use luya\headless\Exception;
 use luya\headless\ActiveEndpoint;
+use luya\headless\Client;
 
 class Stream extends ActiveEndpoint
 {
@@ -16,30 +18,29 @@ class Stream extends ActiveEndpoint
         return '{{%streams}}';
     }
 
-    public function processContent(array $content)
+    public static function find()
     {
-        return isset($content['items']) ? $content['items'] : $content;
+        return parent::find()->setContentProcessor(function($content) {
+            return isset($content['items']) ? $content['items'] : $content;
+        });
     }
 
-    private $_items = [];
-
-    public function setItems(array $items)
+    public static function view($id)
     {
-        $this->_items;
+        throw new Exception("View is not supported for this Endpoint.");
     }
 
-    public function getItems()
+    public function items(Client $client)
     {
-        return StreamItem::iterator($this->_items);
+        return self::findItems($this->alias, $client);
     }
 
-    public function getObjects()
+    public static function findItems($alias, Client $client)
     {
-        $objects = [];
-        foreach ($this->getItems() as $item) {
-            $objects[] = $item->object;
-        }
-
-        return $objects;
+        return StreamItem::iterator(self::find()
+            ->setEndpoint('{endpointName}/{alias}')
+            ->setTokens(['{alias}' => $alias])
+            ->response($client)
+            ->getContent());
     }
 }

@@ -8,7 +8,7 @@ use Heartbeat\Partner\Poi;
 use Heartbeat\Partner\EventDate;
 use Heartbeat\Partner\Stream;
 
-class PoiTest extends TestCase
+class EndpointTest extends TestCase
 {
     private function getClient()
     {
@@ -18,7 +18,7 @@ class PoiTest extends TestCase
         return new Client(getenv('token'));
     }
 
-    public function testPois()
+    public function testPoiAndPoiEvents()
     {
         $poi = Poi::viewOne(466, $this->getClient());
         $this->assertNotNull($poi);
@@ -43,14 +43,14 @@ class PoiTest extends TestCase
 
 
         foreach ($streams->getModels() as $stream) {
-            $streamItem = Stream::view($stream->alias);
-            $r = $streamItem->response($this->getClient());
-            
-            /*
-            foreach ($streamItem->items as $i) {
-                var_dump($i);
+            $this->assertNotNull($stream->title);
+            $this->assertNotNull($stream->alias);
+
+            $streamItem = $stream->items($this->getClient());
+            foreach ($streamItem as $item) {
+                $this->assertNotNull($item->id);
+                $this->assertNotNUll($item->object);
             }
-            */
         }
     }
 }

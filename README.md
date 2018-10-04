@@ -79,3 +79,13 @@ foreach ($poi->eventDates as $date) {
     echo $date->start_timestamp;
 }
 ```
+
+## Streams
+
+Accessing stream data:
+
+```php
+foreach (\Heartbeat\Stream::findItems('stream-alias', $client) as $item) {
+    echo $item->id;
+}
+```
