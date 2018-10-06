@@ -1,4 +1,4 @@
-# Heartbeat Parnter API SDK
+# Heartbeat Partner API SDK
 
 Access the Heartbeat Content Hub Partner APIs with this easy to use PHP SDK.
 
@@ -9,7 +9,7 @@ Access the Heartbeat Content Hub Partner APIs with this easy to use PHP SDK.
 
 ## Installation
 
-In order to you use to library composer is required.
+In order to use this library composer is required.
 
 ```sh
 composer require heartbeat/sdk-partner-api
@@ -17,7 +17,11 @@ composer require heartbeat/sdk-partner-api
 
 ## Usage
 
-Examples how to use the Heartbeat SDK. For every request you need a valid Client object holding the Access Key.
+Examples how to use the Heartbeat SDK. For each request you need a valid Client object holding the access key:
+
+```php
+$client = new Client('ACCESS_TOKEN');
+```
 
 ### Events
 
