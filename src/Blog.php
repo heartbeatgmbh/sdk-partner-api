@@ -2,10 +2,10 @@
 
 namespace Heartbeat\Partner;
 
-use luya\headless\ActiveEndpoint;
+use luya\headless\base\BaseModel;
 
 
-class Blog extends ActiveEndpoint
+class Blog extends BaseModel
 {
     public function getEndpointName()
     {

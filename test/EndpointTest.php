@@ -7,6 +7,8 @@ use Heartbeat\Partner\Client;
 use Heartbeat\Partner\Poi;
 use Heartbeat\Partner\EventDate;
 use Heartbeat\Partner\Stream;
+use Heartbeat\Partner\Blog;
+use Heartbeat\Partner\Rating;
 
 class EndpointTest extends TestCase
 {
@@ -52,5 +54,15 @@ class EndpointTest extends TestCase
                 $this->assertNotNUll($item->object);
             }
         }
+    }
+
+    public function testRatingsPost()
+    {
+        $rating = new Rating();
+        $rating->rating = 10;
+        $rating->poi_id = 516;
+        $rating->user_client_language = 'de';
+        $rating->addRatingAttribute(1, 1);
+        $this->assertTrue($rating->save($this->getClient()));
     }
 }
