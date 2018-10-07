@@ -19,6 +19,9 @@ class Stream extends ActiveEndpoint
     public $alias;
     public $max_items;
 
+    /**
+     * {@inheritDoc}
+     */
     public function getEndpointName()
     {
         return '{{%streams}}';

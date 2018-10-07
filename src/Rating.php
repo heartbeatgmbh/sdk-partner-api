@@ -17,6 +17,9 @@ class Rating extends ActiveEndpoint
     public $user_client_language;
     public $ratingAttributes = [];
     
+    /**
+     * {@inheritDoc}
+     */
     public function getEndpointName()
     {
         return '{{%ratings}}';

@@ -26,6 +26,9 @@ class Poi extends ActiveEndpoint
     public $is_temp_closed;
     public $logo;
 
+    /**
+     * {@inheritDoc}
+     */
     public function getEndpointName()
     {
         return '{{%pois}}';

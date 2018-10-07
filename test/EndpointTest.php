@@ -2,26 +2,15 @@
 
 namespace Heartbeat\Partner\Test;
 
-use PHPUnit\Framework\TestCase;
-use Heartbeat\Partner\Client;
+
 use Heartbeat\Partner\Poi;
 use Heartbeat\Partner\EventDate;
 use Heartbeat\Partner\Stream;
 use Heartbeat\Partner\Blog;
 use Heartbeat\Partner\Rating;
 
-class EndpointTest extends TestCase
+class EndpointTest extends SdkPartnerApiTestCase
 {
-    private function getClient()
-    {
-        $dotenv = new \Dotenv\Dotenv(__DIR__);
-        $dotenv->safeLoad();
-
-        $client = new Client(getenv('token'));
-        $client->sandbox();
-        return $client;
-    }
-
     public function testPoiAndPoiEvents()
     {
         $poi = Poi::viewOne(466, $this->getClient());

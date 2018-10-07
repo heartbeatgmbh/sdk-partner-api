@@ -23,9 +23,4 @@ class Blog extends BaseModel
     public $text_json;
     public $publish_timestamp;
     public $sponsored_text;
-
-    public function getEndpointName()
-    {
-        return '{{%blogs}}';
-    }
 }

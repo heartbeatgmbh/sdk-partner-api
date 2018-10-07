@@ -22,6 +22,9 @@ class EventDate extends ActiveEndpoint
     public $extra_text;
     public $origin;
 
+    /**
+     * {@inheritDoc}
+     */
     public function getEndpointName()
     {
         return '{{%events}}';
