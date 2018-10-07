@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "961b60e70fa6bd0ba4a16b112400c29b",
+    "content-hash": "b067b025386ee7ad31d29f5caeb4563e",
     "packages": [
         {
             "name": "curl/curl",
@@ -63,7 +63,7 @@
         },
         {
             "name": "luyadev/luya-headless",
-            "version": "dev-master",
+            "version": "1.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-headless.git",
@@ -1576,7 +1576,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "luyadev/luya-headless": 20
+        "luyadev/luya-headless": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,
