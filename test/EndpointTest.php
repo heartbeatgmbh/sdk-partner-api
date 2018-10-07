@@ -17,7 +17,9 @@ class EndpointTest extends TestCase
         $dotenv = new \Dotenv\Dotenv(__DIR__);
         $dotenv->safeLoad();
 
-        return new Client(getenv('token'));
+        $client = new Client(getenv('token'));
+        $client->sandbox();
+        return $client;
     }
 
     public function testPoiAndPoiEvents()

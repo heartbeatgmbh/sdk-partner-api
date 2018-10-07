@@ -4,6 +4,16 @@ namespace Heartbeat\Partner;
 
 use luya\headless\ActiveEndpoint;
 
+/**
+ * Event Date Active Endpoint.
+ * 
+ * Contains the Event Date informations.
+ * 
+ * The meta informations about events are stored in Event.
+ * 
+ * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
+ */
 class EventDate extends ActiveEndpoint
 {
     public $id;

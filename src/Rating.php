@@ -4,7 +4,12 @@ namespace Heartbeat\Partner;
 
 use luya\headless\ActiveEndpoint;
 
-
+/**
+ * Rating Active Endpoint.
+ * 
+ * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
+ */
 class Rating extends ActiveEndpoint
 {
     public $rating;

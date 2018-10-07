@@ -4,7 +4,12 @@ namespace Heartbeat\Partner;
 
 use luya\headless\ActiveEndpoint;
 
-
+/**
+ * Point of Intereset Active Endpoint.
+ * 
+ * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
+ */
 class Poi extends ActiveEndpoint
 {
     public $id;
