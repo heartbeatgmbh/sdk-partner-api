@@ -23,7 +23,7 @@ class Event extends BaseModel
     public $age;
     public $website;
     public $ticket_link;
-    public $fyler;
+    public $flyer;
 
     private $_pois = [];
 
