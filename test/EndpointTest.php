@@ -42,7 +42,7 @@ class EndpointTest extends SdkPartnerApiTestCase
             $streamItem = $stream->items($this->getClient());
             foreach ($streamItem as $item) {
                 $this->assertNotNull($item->id);
-                $this->assertNotNUll($item->object);
+                $this->assertNotNull($item->object);
             }
         }
     }
