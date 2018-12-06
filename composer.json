@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "luyadev/luya-headless": "1.0.0-rc3"
+        "luyadev/luya-headless": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit" : "~6.0.0",
