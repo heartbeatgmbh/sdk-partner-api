@@ -9,6 +9,11 @@ use luya\headless\Client;
 /**
  * Streams Active Endpoint.
  * 
+ * Expands:
+ * + images (POI)
+ * + image (Blog)
+ * + virtualProperties (POI, Blog)
+ * 
  * @author Basil Suter <basil@nadar.io>
  * @since 1.0.0
  */
